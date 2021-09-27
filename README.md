@@ -8,7 +8,7 @@ Unfortunately, PM2 has no built-in startup support for Windows. PM2's [documenta
 
 `pm2-windows-startup` adds an entry to the registry to start pm2 after user login. Because it does not create a service, PM2 will not be running until a user has logged into the user interface, and will halt when they log out. It has not been updated since 2015.
 
-`pm2-windows-service` uses `node-windows` to create a service that runs pm2. This is a much better approach, but it hasn't been maintained since 2018, has outdated dependencies that cause crashes on setup, and currently fails to run properly on Node 14. It also runs the service as the the `Local System` user instead of `Local Service`.
+`pm2-windows-service` uses `node-windows` to create a service that runs pm2. This is a much better approach, but it hasn't been maintained since 2018, has outdated dependencies that cause crashes on setup, and currently fails to run properly on Node 14. It also runs the service as the `Local System` user instead of `Local Service`.
 
 This project creates its own Windows Service using the current version of `node-windows` and a series of PowerShell scripts inspired by [this excellent gist](https://gist.github.com/mauron85/e55b3b9d722f91366c50fddf2fca07a4) by [@maxfierke](https://github.com/maxfierke) & [@mauron85](https://github.com/mauron85).
 
